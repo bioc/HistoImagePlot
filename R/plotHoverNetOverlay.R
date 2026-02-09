@@ -46,6 +46,8 @@
 #'   guide_legend theme_void theme coord_fixed element_blank
 #' @importFrom cowplot plot_grid ggdraw draw_image draw_label
 #' @importFrom BiocBaseUtils checkInstalled
+#' @importFrom grDevices rgb
+#' @importFrom imageFeatureTCGA HoverNet import
 #' @importFrom SpatialExperiment spatialCoords
 #' @importFrom SummarizedExperiment colData
 #' @importFrom S4Vectors metadata
