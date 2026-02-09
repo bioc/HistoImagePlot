@@ -1,6 +1,6 @@
 Package: HistoImagePlot
 Title: Plotting functionality for Histopathology pipeline datasets
-Version: 0.99.0
+Version: 0.99.1
 Authors@R:
     person("Ilaria", "Billato", , "ilaria.billato@phd.unipd.it",
         c("aut", "cre"), c(ORCID = "0000-0002-3335-3254", 
