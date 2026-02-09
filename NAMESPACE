@@ -3,6 +3,7 @@
 export(plotHoverNetH5ADOverlay)
 export(plotHoverNetOverlay)
 importFrom(BiocBaseUtils,checkInstalled)
+importFrom(BiocBaseUtils,isScalarCharacter)
 importFrom(S4Vectors,metadata)
 importFrom(SpatialExperiment,spatialCoords)
 importFrom(SummarizedExperiment,colData)
