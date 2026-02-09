@@ -100,7 +100,9 @@ plotHoverNetOverlay <- function(
     }
 
     # Import thumbnail
-    png_img <- importHoverNetThumbnail(json_path)
+    png_img <- .json_to_png_path(json_path) |>
+        HoverNet() |>
+        import()
     if (is.null(png_img)) {
         stop("Could not retrieve thumbnail image for: ", json_path)
     }
