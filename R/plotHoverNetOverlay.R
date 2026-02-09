@@ -33,7 +33,7 @@
 #' @details The function performs the following steps:
 #'   1. If `hovernet` is a file path, imports it using `HoverNet()`
 #'    and `import()`
-#'   2. Retrieves the associated thumbnail PNG using `importHoverNetThumbnail()`
+#'   2. Retrieves the associated thumbnail PNG
 #'   3. Creates a segmentation plot colored by cell type
 #'   4. Combines the thumbnail and segmentation side-by-side
 #'   5. Adds an optional title
