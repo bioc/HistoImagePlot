@@ -11,7 +11,7 @@ Description: Create side-by-side visualizations of tissue thumbnail image and
     Functionality automatically retrieves the thumbnail image associated
     with a HoverNet JSON file and overlays the segmentation data.
 biocViews: Visualization, Spatial
-Depends: R (>= 4.6.0)
+Depends: R (>= 4.5.0)
 Imports:
     BiocBaseUtils,
     cowplot,
@@ -31,7 +31,7 @@ Suggests:
     tinytest
 License: Artistic-2.0
 Encoding: UTF-8
-VignetteEngine: knitr
+VignetteBuilder: knitr
 BugReports: https://github.com/waldronlab/HistoImagePlot/issues
 URL: https://github.com/waldronlab/HistoImagePlot
 Roxygen: list(markdown = TRUE)
