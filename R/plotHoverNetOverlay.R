@@ -258,9 +258,11 @@ plotHoverNetOverlay <- function(
 #'   Remote PNG files are automatically cached using `BiocFileCache` for
 #'   efficient handling without manual downloads.
 #'
+#' @importFrom BiocBaseUtils isScalarCharacter
 #' @importFrom ggplot2 ggplot aes geom_point scale_color_manual guides
 #'   guide_legend theme_void theme coord_fixed element_blank margin
 #' @importFrom cowplot plot_grid ggdraw draw_image draw_label get_legend
+#' @importFrom imageFeatureTCGA HoverNet import
 #' @importFrom SpatialExperiment spatialCoords
 #' @importFrom SummarizedExperiment colData
 #' @importFrom methods is
@@ -311,18 +313,16 @@ plotHoverNetH5ADOverlay <- function(
             "spatialCoords.")
     }
 
-    # Check thumbnail path
-    if (missing(thumbnail_path) || is.null(thumbnail_path)) {
-        stop("'thumbnail_path' is required.")
-    }
+    stopifnot(
+        isScalarCharacter(thumbnail_path)
+    )
 
-    # Handle URL or local file for thumbnail
-    is_url <- .is_url(thumbnail_path)
-    if (is_url)
-        thumbnail_path <- .cache_url_file(thumbnail_path)
+    img <- HoverNet(thumbnail_path) |>
+        import() |>
+        magick::image_read()
 
-    if (!file.exists(thumbnail_path))
-        stop("Thumbnail file not found: ", thumbnail_path)
+    if (flip_image)
+        img <- magick::image_flip(img)
 
     # Prepare data for plotting
     gg <- data.frame(
@@ -376,12 +376,6 @@ plotHoverNetH5ADOverlay <- function(
                 legend.box.margin = ggplot2::margin(0, 0, 0, 10)
             )
     )
-
-    # Prepare image
-    img <- magick::image_read(thumbnail_path)
-    if (flip_image) {
-        img <- magick::image_flip(img)
-    }
 
     # Create image plot
     p_img <- cowplot::ggdraw() + cowplot::draw_image(img)
