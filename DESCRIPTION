@@ -10,7 +10,7 @@ Description: Create side-by-side visualizations of tissue thumbnail image and
     HoverNet cell segmentation with colored cell type labels.
     Functionality automatically retrieves the thumbnail image associated
     with a HoverNet JSON file and overlays the segmentation data.
-biocViews: Visualization, Spatial
+biocViews: Software, Visualization, Spatial
 Depends: R (>= 4.5.0)
 Imports:
     BiocBaseUtils,
@@ -29,6 +29,9 @@ Suggests:
     magick,
     rmarkdown,
     tinytest
+Remotes:
+    waldronlab/imageFeatureTCGA,
+    waldronlab/imageTCGAutils
 License: Artistic-2.0
 Encoding: UTF-8
 VignetteBuilder: knitr
