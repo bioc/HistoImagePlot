@@ -22,7 +22,8 @@ Imports:
     RColorBrewer,
     S4Vectors,
     SpatialExperiment,
-    SummarizedExperiment
+    SummarizedExperiment,
+    utils
 Suggests:
     BiocStyle,
     knitr,

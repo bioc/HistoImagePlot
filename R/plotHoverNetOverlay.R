@@ -1,3 +1,5 @@
+utils::globalVariables(c("x", "y", "label", "type"))
+
 #' Plot HoverNet Segmentation Overlay with Thumbnail
 #'
 #' @description Creates a side-by-side visualization of the original tissue
