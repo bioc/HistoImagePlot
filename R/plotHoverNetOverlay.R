@@ -8,22 +8,29 @@
 #' @param hovernet A `SpatialExperiment` or `SpatialFeatureExperiment` object
 #'   created by importing a HoverNet JSON file, or a path/URL to a HoverNet
 #'   JSON file.
+#'
 #' @param json_path Optional. Path or URL to the HoverNet JSON file. Only
 #'   required if `hovernet` is a `SpatialExperiment` object and the original
 #'   JSON path is not stored in metadata. Default is `NULL`.
+#'
 #' @param title Optional. Title for the combined plot. If `NULL`, uses the
 #'   basename of the JSON file. Default is `NULL`.
 #' @param point_size Numeric value for the size of points in the segmentation
 #'   plot. Default is `0.01`.
+#'
 #' @param legend_point_size Numeric value for the size of points in the legend.
 #'   Default is `2`.
+#'
 #' @param color_palette Optional. A named vector of colors for cell types. If
 #'   `NULL`, uses the colors from the HoverNet type map or RColorBrewer.
 #'   Default is `NULL`.
+#'
 #' @param ncol Number of columns for the side-by-side plots. Default is `2`.
 #' @param rel_widths Relative widths of the image and segmentation plots.
 #'   Default is `c(1, 1.08)`.
+#'
 #' @param title_size Font size for the main title. Default is `25`.
+#'
 #' @param flip_image Logical. Whether to flip the image vertically to match
 #'   coordinate system. Default is `TRUE`.
 #'
@@ -227,19 +234,28 @@ plotHoverNetOverlay <- function(
 #'
 #' @param hovernet A `SpatialExperiment` or `SpatialFeatureExperiment` object
 #'   containing HoverNet segmentation data from h5ad format.
+#'
 #' @param thumbnail_path Path or URL to the thumbnail PNG image file.
+#'
 #' @param title Optional. Title for the combined plot. If `NULL`, uses
 #'   "HoverNet Segmentation". Default is `NULL`.
+#'
 #' @param point_size Numeric value for the size of points in the segmentation
 #'   plot. Default is `0.01`.
+#'
 #' @param legend_point_size Numeric value for the size of points in the legend.
 #'   Default is `2`.
+#'
 #' @param color_palette Optional. A named vector of colors for cell types. If
 #'   `NULL`, uses RColorBrewer palette. Default is `NULL`.
+#'
 #' @param ncol Number of columns for the side-by-side plots. Default is `2`.
+#'
 #' @param rel_widths Relative widths of the image and segmentation plots.
 #'   Default is `c(1, 1.08)`.
+#'
 #' @param title_size Font size for the main title. Default is `25`.
+#'
 #' @param flip_image Logical. Whether to flip the image vertically to match
 #'   coordinate system. Default is `TRUE`.
 #'
