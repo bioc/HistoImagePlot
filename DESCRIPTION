@@ -25,6 +25,7 @@ Imports:
     SummarizedExperiment,
     utils
 Suggests:
+    anndataR,
     BiocStyle,
     dplyr,
     knitr,
