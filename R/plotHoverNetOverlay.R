@@ -1,5 +1,3 @@
-utils::globalVariables(c("x", "y", "label", "type"))
-
 #' Plot HoverNet Segmentation Overlay with Thumbnail
 #'
 #' @description Creates a side-by-side visualization of the original tissue
@@ -45,7 +43,7 @@ utils::globalVariables(c("x", "y", "label", "type"))
 #'    taken from the `type_map` metadata if available.
 #'
 #' @importFrom ggplot2 ggplot aes geom_point scale_color_manual guides
-#'   guide_legend theme_void theme coord_fixed element_blank
+#'   guide_legend theme_void theme coord_fixed element_blank .data
 #' @importFrom cowplot plot_grid ggdraw draw_image draw_label
 #' @importFrom BiocBaseUtils checkInstalled
 #' @importFrom grDevices rgb
@@ -136,7 +134,9 @@ plotHoverNetOverlay <- function(
     }
 
     # Create segmentation plot
-    p_feat <- ggplot2::ggplot(gg, ggplot2::aes(x, y, col = label)) +
+    p_feat <- ggplot2::ggplot(
+            gg, ggplot2::aes(.data$x, .data$y, col = .data$label)
+        ) +
         ggplot2::geom_point(size = point_size) +
         ggplot2::scale_color_manual(
             values = color_palette,
@@ -352,7 +352,9 @@ plotHoverNetH5ADOverlay <- function(
     }
 
     # Create segmentation plot
-    p_feat <- ggplot2::ggplot(gg, ggplot2::aes(x, y, col = type)) +
+    p_feat <- ggplot2::ggplot(
+            gg, ggplot2::aes(.data$x, .data$y, col = .data$type)
+        ) +
         ggplot2::geom_point(size = point_size) +
         ggplot2::scale_color_manual(
             values = color_palette,
