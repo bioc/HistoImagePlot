@@ -13,7 +13,7 @@ Description: Create side-by-side visualizations of tissue thumbnail image and
     This package is intended for researchers working with histopathological
     images, facilitating exploratory analysis,
     and integrates with the imageFeatureTCGA Bioconductor package.
-biocViews: Visualization, Spatial
+biocViews: Software, Visualization, Spatial
 Depends: R (>= 4.5.0)
 Imports:
     BiocBaseUtils,
