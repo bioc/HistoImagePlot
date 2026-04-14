@@ -10,7 +10,7 @@ output:
     toc_depth: 3
 package: imageFeatureTCGA
 vignette: >
-  %\VignetteIndexEntry{imageFeatureTCGA}
+  %\VignetteIndexEntry{HistoImagePlot}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
