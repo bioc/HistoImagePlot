@@ -6,10 +6,13 @@ Authors@R:
         c("aut", "cre"), c(ORCID = "0000-0002-3335-3254", 
         affiliation = "Department of Biology, University of Padova")
     )
-Description: Create side-by-side visualizations of tissue thumbnail image and
+Description: Create side-by-side visualizations of tissue thumbnail image and 
     HoverNet cell segmentation with colored cell type labels.
     Functionality automatically retrieves the thumbnail image associated
     with a HoverNet JSON file and overlays the segmentation data.
+    This package is intended for researchers working with histopathological
+    images, facilitating exploratory analysis,
+    and integrates with the imageFeatureTCGA Bioconductor package.
 biocViews: Visualization, Spatial
 Depends: R (>= 4.5.0)
 Imports:
