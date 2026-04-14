@@ -29,6 +29,15 @@ library(SpatialExperiment)
 library(ggplot2)
 ```
 
+# Installation
+
+```{r install, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("waldronlab/HistoImagePlot")
+```
+
 # Introduction
 
 HoverNet is a deep learning model for simultaneous segmentation and 
