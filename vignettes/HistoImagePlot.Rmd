@@ -8,7 +8,7 @@ output:
     number_sections: true
     toc_float: true
     toc_depth: 3
-package: imageFeatureTCGA
+package: HistoImagePlot
 vignette: >
   %\VignetteIndexEntry{HistoImagePlot}
   %\VignetteEngine{knitr::rmarkdown}
