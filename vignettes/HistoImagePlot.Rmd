@@ -17,8 +17,19 @@ vignette: >
 
 # imageFeatureTCGA
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache = TRUE, echo = TRUE)
+```{r vignette-setup, include=FALSE}
+fig_path <-
+    if (knitr::opts_knit$get("child")) {
+        "../../man/figures/"
+    } else {
+        "../man/figures/"
+    }
+
+knitr::opts_chunk$set(
+    cache = TRUE,
+    echo = TRUE,
+    fig.path = fig_path
+)
 ```
 
 ```{r load_packages, include=TRUE, results="hide", message=FALSE, warning=FALSE}
