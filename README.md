@@ -9,6 +9,15 @@ library(SpatialExperiment)
 library(ggplot2)
 ```
 
+# Installation
+
+``` r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("waldronlab/HistoImagePlot")
+```
+
 # Introduction
 
 HoverNet is a deep learning model for simultaneous segmentation and
@@ -60,7 +69,7 @@ thumb_path <- paste0(
 plotHoverNetH5ADOverlay(hn_spe, thumb_path)
 ```
 
-<img src="/home/mramos/gh/HistoImagePlot/README_files/figure-gfm/overlay-basic-1.png" alt="" width="100%" />
+<img src="man/figures/overlay-basic-1.png" alt="" width="100%" />
 
 ## Customized Overlay
 
@@ -74,7 +83,7 @@ plotHoverNetH5ADOverlay(
 )
 ```
 
-<img src="/home/mramos/gh/HistoImagePlot/README_files/figure-gfm/overlay-custom-1.png" alt="" width="100%" />
+<img src="man/figures/overlay-custom-1.png" alt="" width="100%" />
 
 ## Custom Color Palette
 
@@ -96,7 +105,7 @@ plotHoverNetH5ADOverlay(
 )
 ```
 
-<img src="/home/mramos/gh/HistoImagePlot/README_files/figure-gfm/overlay-colors-1.png" alt="" width="100%" />
+<img src="man/figures/overlay-colors-1.png" alt="" width="100%" />
 
 H5AD files contain additional computed features like mean intensity and
 nearest neighbor distance.
@@ -125,7 +134,7 @@ p2 <- ggplot(h5ad_coords, aes(x = x_centroid, y = y_centroid,
 cowplot::plot_grid(p1, p2, ncol = 2)
 ```
 
-<img src="/home/mramos/gh/HistoImagePlot/README_files/figure-gfm/h5ad-features-1.png" alt="" width="100%" />
+<img src="man/figures/h5ad-features-1.png" alt="" width="100%" />
 
 # Session Info
 
@@ -164,21 +173,22 @@ sessionInfo()
 #> [17] colorout_1.3-2             
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] tidyselect_1.2.1     viridisLite_0.4.2    blob_1.2.4           farver_2.1.2         filelock_1.0.3       S7_0.2.1            
-#>  [7] fastmap_1.2.0        BiocFileCache_3.1.0  digest_0.6.39        lifecycle_1.0.4      ellipsis_0.3.2       RSQLite_2.4.5       
-#> [13] magrittr_2.0.4       compiler_4.6.0       rlang_1.1.6          tools_4.6.0          yaml_2.3.12          knitr_1.51          
-#> [19] labeling_0.4.3       askpass_1.2.1        S4Arrays_1.11.1      curl_7.0.0           bit_4.6.0            pkgbuild_1.4.8      
-#> [25] reticulate_1.44.1    DelayedArray_0.37.0  RColorBrewer_1.1-3   BiocAddins_0.99.26   pkgload_1.4.1        abind_1.4-8         
-#> [31] rsconnect_1.7.0      withr_3.0.2          purrr_1.2.0          sys_3.4.3            desc_1.4.3           grid_4.6.0          
-#> [37] Rhdf5lib_1.33.0      scales_1.4.0         dichromat_2.0-0.1    cli_3.6.5            rmarkdown_2.30       remotes_2.5.0       
-#> [43] otel_0.2.0           rstudioapi_0.18.0    tzdb_0.5.0           rjson_0.2.23         sessioninfo_1.2.3    BiocBaseUtils_1.13.0
-#> [49] rhdf5_2.55.12        DBI_1.2.3            cachem_1.1.0         BiocManager_1.30.27  XVector_0.51.0       vctrs_0.6.5         
-#> [55] devtools_2.4.6       Matrix_1.7-4         jsonlite_2.0.0       hms_1.1.4            bit64_4.6.0-1        TENxIO_1.13.3       
-#> [61] magick_2.9.0         credentials_2.0.3    glue_1.8.0           codetools_0.2-20     cowplot_1.2.0        gtable_0.3.6        
-#> [67] BiocIO_1.21.0        tibble_3.3.0         pillar_1.11.1        rhdf5filters_1.23.3  rappdirs_0.3.4       htmltools_0.5.9     
-#> [73] openssl_2.3.4        dbplyr_2.5.1         R6_2.6.1             httr2_1.2.2          gert_2.3.1           evaluate_1.0.5      
-#> [79] lattice_0.22-7       readr_2.1.6          png_0.1-8            memoise_2.0.1        rjsoncons_1.3.2      Rcpp_1.1.1          
-#> [85] SparseArray_1.11.10  anndataR_1.1.0       xfun_0.56            fs_1.6.6             usethis_3.2.1        pkgconfig_2.0.3
+#>  [1] DBI_1.2.3            httr2_1.2.2          remotes_2.5.0        anndataR_1.1.0       rlang_1.1.6          magrittr_2.0.4      
+#>  [7] otel_0.2.0           compiler_4.6.0       RSQLite_2.4.5        png_0.1-8            vctrs_0.6.5          pkgconfig_2.0.3     
+#> [13] fastmap_1.2.0        dbplyr_2.5.1         magick_2.9.0         XVector_0.51.0       ellipsis_0.3.2       labeling_0.4.3      
+#> [19] rmarkdown_2.30       sessioninfo_1.2.3    tzdb_0.5.0           purrr_1.2.0          bit_4.6.0            xfun_0.56           
+#> [25] gert_2.3.1           cachem_1.1.0         jsonlite_2.0.0       blob_1.2.4           rhdf5filters_1.23.3  DelayedArray_0.37.0 
+#> [31] Rhdf5lib_1.33.0      R6_2.6.1             RColorBrewer_1.1-3   reticulate_1.44.1    pkgload_1.4.1        Rcpp_1.1.1          
+#> [37] knitr_1.51           usethis_3.2.1        readr_2.1.6          BiocBaseUtils_1.13.0 Matrix_1.7-4         tidyselect_1.2.1    
+#> [43] rstudioapi_0.18.0    dichromat_2.0-0.1    abind_1.4-8          yaml_2.3.12          codetools_0.2-20     curl_7.0.0          
+#> [49] rjsoncons_1.3.2      pkgbuild_1.4.8       lattice_0.22-7       tibble_3.3.0         withr_3.0.2          S7_0.2.1            
+#> [55] askpass_1.2.1        evaluate_1.0.5       BiocAddins_0.99.26   desc_1.4.3           BiocFileCache_3.1.0  pillar_1.11.1       
+#> [61] BiocManager_1.30.27  filelock_1.0.3       rsconnect_1.7.0      rprojroot_2.1.1      credentials_2.0.3    hms_1.1.4           
+#> [67] scales_1.4.0         glue_1.8.0           tools_4.6.0          BiocIO_1.21.0        sys_3.4.3            fs_1.6.6            
+#> [73] cowplot_1.2.0        rhdf5_2.55.12        grid_4.6.0           devtools_2.4.6       TENxIO_1.13.3        cli_3.6.5           
+#> [79] rappdirs_0.3.4       S4Arrays_1.11.1      viridisLite_0.4.2    gtable_0.3.6         digest_0.6.39        SparseArray_1.11.10 
+#> [85] rjson_0.2.23         farver_2.1.2         memoise_2.0.1        htmltools_0.5.9      lifecycle_1.0.4      openssl_2.3.4       
+#> [91] bit64_4.6.0-1
 ```
 
 </details>
